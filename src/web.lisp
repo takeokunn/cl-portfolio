@@ -24,10 +24,13 @@
 ;; Routing rules
 
 (defroute "/" ()
-  (render #P"index.html"))
+    (render #P"index.html"))
 
-(defroute "/hello" ()
-    (render #P "hello.html"))
+(defroute "/about" ()
+    (render #P"about.html"))
+
+(defroute "/contact" ()
+    (render #P "contact.html"))
 
 ;;
 ;; Error pages

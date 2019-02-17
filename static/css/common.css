@@ -1,0 +1,14 @@
+@font-face {
+	font-family: 'Raleway-Regular';
+	src: url(/font/Raleway-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Sofia-Regular';
+	src: url(/font/Sofia-Regular.ttf);
+}
+
+body {
+    font-family: Raleway-Regular, 游ゴシック体, "Yu Gothic", YuGothic, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
