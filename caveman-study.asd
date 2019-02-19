@@ -1,29 +1,31 @@
 (defsystem "caveman-study"
-  :version "0.1.0"
-  :author "takeokunn"
-  :license ""
-  :depends-on ("clack"
-               "lack"
-               "caveman2"
-               "envy"
-               "cl-ppcre"
-               "uiop"
+    :version "0.1.0"
+    :author "takeokunn"
+    :license ""
+    :depends-on ("clack"
+                    "lack"
+                    "caveman2"
+                    "envy"
+                    "cl-ppcre"
+                    "uiop"
+                    "alexandria"
 
-               ;; for @route annotation
-               "cl-syntax-annot"
+                    ;; for @route annotation
+                    "cl-syntax-annot"
 
-               ;; HTML Template
-               "djula"
+                    ;; HTML Template
+                    "djula"
 
-               ;; for DB
-               "datafly"
-               "sxql")
-  :components ((:module "src"
-                :components
-                ((:file "main" :depends-on ("config" "view" "db"))
-                 (:file "web" :depends-on ("view"))
-                 (:file "view" :depends-on ("config"))
-                 (:file "db" :depends-on ("config"))
-                 (:file "config"))))
-  :description ""
-  :in-order-to ((test-op (test-op "caveman-study-test"))))
+                    ;; for DB
+                    "datafly"
+                    "sxql")
+    :components ((:module "src"
+                     :components
+                     ((:file "main" :depends-on ("config" "view" "db"))
+                         (:file "web" :depends-on ("view" "controller"))
+                         (:file "controller" :depends-on ("view"))
+                         (:file "view" :depends-on ("config"))
+                         (:file "db" :depends-on ("config"))
+                         (:file "config"))))
+    :description ""
+    :in-order-to ((test-op (test-op "caveman-study-test"))))

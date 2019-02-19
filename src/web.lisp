@@ -1,17 +1,18 @@
 (in-package :cl-user)
 (defpackage caveman-study.web
-  (:use :cl
+    (:use :cl
         :caveman2
         :caveman-study.config
         :caveman-study.view
         :caveman-study.db
+        :caveman-study.controller
         :datafly
         :sxql)
-  (:export :*web*))
+    (:export :*web*))
 (in-package :caveman-study.web)
 
 ;; for @route annotation
-(syntax:use-syntax :annot)
+;; (syntax:use-syntax :annot)
 
 ;;
 ;; Application
@@ -24,13 +25,13 @@
 ;; Routing rules
 
 (defroute "/" ()
-    (render #P"index.html"))
+    (root))
 
 (defroute "/about" ()
-    (render #P"about.html"))
+    (about))
 
 (defroute "/contact" ()
-    (render #P "contact.html"))
+    (contact))
 
 ;;
 ;; Error pages
