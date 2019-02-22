@@ -1,0 +1,72 @@
+main#about {}
+
+main#about .my-site {
+    padding: 50px 0;
+}
+
+
+main#about .my-site > p {
+    font-size: 2.5rem;
+    font-family: 'Sofia-Regular';
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+main#about .my-site .column {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+main#about .my-site .column p:first-of-type {
+    text-align: center;
+    margin: 20px 0;
+}
+
+main#about .my-site .column p:first-of-type .svg-inline--fa {
+    font-size: 2.5rem;
+}
+
+main#about .my-site .column p:nth-of-type(2) {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+main#about .my-site .column p:last-of-type {
+    word-wrap: break-word;
+    font-size: 0.8rem;
+}
+
+main#about .service {
+    padding: 50px 0;
+}
+
+main#about .service .column p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Sofia-Regular';
+    margin-bottom: 20px;
+}
+
+main#about .service .column .img-block {
+    text-align: center;
+}
+
+main#about .service .column .img-block img {
+    width: calc(100% - 50px);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.4);
+}
+
+main#about .service .column p:nth-last-of-type(2) {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+main#about .service .column p:last-of-type > a {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #0bd;
+}

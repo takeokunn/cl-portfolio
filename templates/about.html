@@ -3,8 +3,79 @@
 
 {% block content %}
 
-<main id="about" class="container">
-    <p>about</p>
+<main id="about">
+    <div class="my-site container">
+        <p>My Sites</p>
+        <div class="columns is-multiline">
+            <div class="column is-one-quarter">
+                <p><i class="fas fa-book"></i></p>
+                <p>blog</p>
+                <p>勉強したことや気が付いたことなどを書いています。</p>
+            </div>
+            <div class="column is-one-quarter">
+                <p><i class="fab fa-youtube"></i></p>
+                <p>Youtube Viewer</p>
+                <p>Youtubeを効率よくみるためのツールです。React+Reduxで作成しました。詳しくはこちら</p>
+            </div>
+            <div class="column is-one-quarter">
+                <p><i class="fab fa-line"></i></p>
+                <p>Line Bot</p>
+                <p>Line Botを作成しました。</p>
+            </div>
+            <div class="column is-one-quarter">
+                <p><i class="fas fa-chart-bar"></i></p>
+                <p>株取引プログラム</p>
+                <p>システムトレードのプログラムを作成しました。</p>
+            </div>
+            <div class="column is-one-quarter">
+                <p><i class="fab fa-spinner"></i></p>
+                <p>Comming Soon</p>
+                <p>サービス開発中....</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <div class="img-block">
+                        <img src="/images/blog.png" alt="blog.png">
+                    </div>
+                </div>
+                <div class="column">
+                    <p>Blog</p>
+                    <p>
+                        takeokunnのblogです。
+                    </p>
+                    <p>
+                        <a href="#">https://takeokunn.xyz</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="container">
+            <div class="columns is-pulled-left">
+                <div class="column">
+                    <div class="img-block">
+                        <img src="/images/youtube.png" alt="youtube.png">
+                    </div>
+                </div>
+                <div class="column">
+                    <p>Youtube Viewer</p>
+                    <p>
+                        Youtube Viewer built on Electron.
+                    </p>
+                    <p>
+                        <a href="#">https://github.com/takeokunn/youtube_viewer</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 {% endblock %}
