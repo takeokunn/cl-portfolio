@@ -17,6 +17,14 @@ body {
 @media (max-width: 768px) {
     header .navbar-item {
         text-align: center;
-        padding: 10px 0;
+        padding: 20px 0;
+    }
+}
+
+/* bulma */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }

@@ -1,10 +1,38 @@
 {% extends "layouts/default.html" %}
-{% block title %}takeokunn's portfolio{% endblock %}
+{% block title %}contact | takeokunn's portfolio{% endblock %}
 
 {% block content %}
 
 <main id="contact" class="container">
-    <p>contact</p>
+    <p>Contact</p>
+    <p>お仕事の依頼、相談事などあれば以下のフォームからお願いします。</p>
+    <form action="/contact" method="post">
+        <div class="columns">
+            <div class="column is-half">
+                <p class="label">お名前</p>
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" placeholder="例) takeokunn">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                    </span>
+                </p>
+                <p class="label">メールアドレス</p>
+                <p class="control has-icons-left has-icons-right">
+                    <input class="input" type="email" placeholder="例) bararararatty@gmail.com">
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="column  is-half">
+                <p class="label">お問い合わせ内容</p>
+                <textarea name="content" class="textarea" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="btn-block">
+            <button type="submit" class="button is-medium is-primary is-rounded">送信</button>
+        </div>
+    </form>
 </main>
 
 {% endblock %}
