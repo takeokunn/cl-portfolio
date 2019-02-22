@@ -1,18 +1,10 @@
-/* header */
-@media (max-width: 768px) {
-    header .navbar-item {
-        text-align: center;
-        padding: 20px 0;
-    }
-}
-
 /* main */
 #main .footer-text {
     text-align: center;
 }
 
 #main .columns {
-    padding: 175px 0;
+    padding: 160px 0;
 }
 
 #main .columns .column:first-of-type {
@@ -22,6 +14,9 @@
 @media (max-width: 768px) {
     #main .columns .column:first-of-type {
         display: none;
+    }
+    #main .columns .column:last-of-type {
+        margin-left: 20px;
     }
 }
 
@@ -53,6 +48,18 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    #main .column:last-of-type p.job {
+        font-size: 2rem;
+    }
+
+    #main .column:last-of-type p.name {
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+    }
+
 }
 
 #main .column:last-of-type ul {

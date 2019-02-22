@@ -12,3 +12,11 @@ body {
     font-family: Raleway-Regular, 游ゴシック体, "Yu Gothic", YuGothic, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+
+/* header */
+@media (max-width: 768px) {
+    header .navbar-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
