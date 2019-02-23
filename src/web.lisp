@@ -31,7 +31,13 @@
     (about))
 
 (defroute "/contact" ()
-    (contact))
+    (get-contact))
+
+(defroute ("/contact" :method :POST) (&key |name| |email| |text|)
+    (post-contact |name| |email| |text|))
+
+(defroute "/thanks" ()
+    (thanks))
 
 ;;
 ;; Error pages

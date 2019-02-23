@@ -1,0 +1,23 @@
+#thanks {
+    padding: 160px 0;
+}
+
+#thanks p {
+    text-align: center;
+}
+
+#thanks p:first-of-type {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Sofia-Regular';
+    margin-bottom: 20px;
+}
+
+#thanks p:last-of-type {
+    font-size: 1.5rem;
+}
+
+#thanks p:last-of-type a {
+    font-weight: bold;
+    color: #0bd;
+}

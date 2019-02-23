@@ -23,7 +23,7 @@
     `(:databases ((:maindb :mysql
                       :database-name "portfolio"
                       :username "root"
-                      :password ""))))
+                      :password "P@ssw0rd"))))
 
 (defconfig |development|
     '())

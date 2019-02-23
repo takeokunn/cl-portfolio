@@ -9,6 +9,9 @@
                     "cl-ppcre"
                     "uiop"
                     "alexandria"
+                    "drakma"
+                    "cl-json"
+                    "log4cl"
 
                     ;; for @route annotation
                     "cl-syntax-annot"
