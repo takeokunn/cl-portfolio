@@ -9,23 +9,24 @@
         :about
         :get-contact
         :post-contact
-        :thanks))
+        :thanks
+        :post-slack
+        :insert-contacts
+        :insert-contacts))
 
 (in-package :caveman-study.controller)
 
 ;; for slack
-(defun post-slack ()
-    (setq *url* "https://hooks.slack.com/services/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")
-    (setq *json-parameter* '((:username "bot")
-                                (:icon_emoji ":hatching_chick:")
-                                (:as_user true)
-                                (:text "post post")))
-     (drakma:http-request *url*
-          :method :post
-          :parameters '(("payload" . *payload*))
-          :content-type "application/json"))
+(defparameter *slack-url* "https://hooks.slack.com/services/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")
 
-;; for db
+;; (defun post-slack (name email text)
+;;     (setq *payload* (format nil "{\"username\":\"bot\",\"icon_emoji\":\":hatching_chick:\",\"text\":\"<@U7RM4J8MR> 名前: ~A \n メールアドレス: ~A \n 内容: ~A \",\"as_user\":true}" name email text))
+;;     (setq drakma:*drakma-default-external-format* :utf-8)
+;;     2(drakma:http-request *slack-url*
+;;         :method :post
+;;         :content-type "application/json"
+;;         :parameters '(("payload" . *payload*))))
+
 (defun insert-contacts (name email text)
     (with-connection (db)
         (retrieve-all
