@@ -33,8 +33,8 @@
 (defroute "/contact" ()
     (get-contact))
 
-(defroute ("/contact" :method :POST) (&key |name| |email| |text|)
-    (post-contact |name| |email| |text|))
+(defroute ("/contact" :method :POST) (&key |name| |email| |content|)
+    (post-contact |name| |email| |content|))
 
 (defroute "/thanks" ()
     (thanks))
