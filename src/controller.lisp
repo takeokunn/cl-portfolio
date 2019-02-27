@@ -3,8 +3,7 @@
     (:use :cl
         :caveman-study.view
         :caveman-study.db
-        :datafly
-        :sxql)
+        :caveman-study.model)
     (:export :root
         :about
         :get-contact
@@ -24,14 +23,6 @@
             :method :post
             :content-type "application/json"
             :parameters `(("payload" . ,payload)))))
-
-(defun insert-contacts (name email text)
-    (with-connection (db)
-        (retrieve-all
-            (insert-into :contacts
-                (set= :name name
-                    :email email
-                    :text text)))))
 
 ;; for controller
 (defun root ()
