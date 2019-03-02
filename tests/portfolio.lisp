@@ -1,9 +1,9 @@
 (in-package :cl-user)
-(defpackage caveman-study-test
+(defpackage portfolio-test
   (:use :cl
-        :caveman-study
+        :portfolio
         :prove))
-(in-package :caveman-study-test)
+(in-package :portfolio-test)
 
 (plan nil)
 

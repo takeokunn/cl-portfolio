@@ -1,12 +1,12 @@
 (in-package :cl-user)
-(defpackage caveman-study.model
+(defpackage portfolio.model
     (:use :cl
-        :caveman-study.db
+        :portfolio.db
         :datafly
         :sxql)
     (:export :insert-contacts))
 
-(in-package :caveman-study.model)
+(in-package :portfolio.model)
 
 (defun insert-contacts (name email text)
     (with-connection (db)

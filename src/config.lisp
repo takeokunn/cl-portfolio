@@ -1,5 +1,5 @@
 (in-package :cl-user)
-(defpackage caveman-study.config
+(defpackage portfolio.config
     (:use :cl)
     (:import-from :envy
         :config-env-var
@@ -11,11 +11,11 @@
         :appenv
         :developmentp
         :productionp))
-(in-package :caveman-study.config)
+(in-package :portfolio.config)
 
 (setf (config-env-var) "APP_ENV")
 
-(defparameter *application-root*   (asdf:system-source-directory :caveman-study))
+(defparameter *application-root*   (asdf:system-source-directory :portfolio))
 (defparameter *static-directory*   (merge-pathnames #P"static/" *application-root*))
 (defparameter *template-directory* (merge-pathnames #P"templates/" *application-root*))
 

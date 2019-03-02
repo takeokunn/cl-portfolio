@@ -1,26 +1,17 @@
-# caveman-study
-
+# portfolio
 
 
 ## Usage
 
-initialize
 ```
-CL-USER> (quicklisp:quickload :caveman2)
-CL-USER> (ql:quickload :caveman-study)
-```
-
-
-use
-```
-CL-USER> (reqire :caveman-study)
+CL-USER> (ql:quickload :portfolio)
+CL-USER> (portfolio:start)
 ```
 
-## Installation
 
 ## Author
 
-* takeokunn
+* takeokunn <bararararatty@gmail.com>
 
 ## Copyright
 

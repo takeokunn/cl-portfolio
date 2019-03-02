@@ -1,16 +1,16 @@
 (in-package :cl-user)
-(defpackage caveman-study
+(defpackage portfolio
   (:use :cl)
-  (:import-from :caveman-study.config
+  (:import-from :portfolio.config
                 :config)
   (:import-from :clack
                 :clackup)
   (:export :start
            :stop))
-(in-package :caveman-study)
+(in-package :portfolio)
 
 (defvar *appfile-path*
-    (asdf:system-relative-pathname :caveman-study #P"app.lisp"))
+    (asdf:system-relative-pathname :portfolio #P"app.lisp"))
 
 (defvar *handler* nil)
 

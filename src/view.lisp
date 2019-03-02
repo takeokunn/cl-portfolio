@@ -1,7 +1,7 @@
 (in-package :cl-user)
-(defpackage caveman-study.view
+(defpackage portfolio.view
     (:use :cl)
-    (:import-from :caveman-study.config
+    (:import-from :portfolio.config
         :*template-directory*)
     (:import-from :caveman2
         :*response*
@@ -15,7 +15,7 @@
         :encode-json)
     (:export :render
         :render-json))
-(in-package :caveman-study.view)
+(in-package :portfolio.view)
 
 (djula:add-template-directory *template-directory*)
 
@@ -38,9 +38,9 @@
 ;;
 ;; Execute package definition
 
-(defpackage caveman-study.djula
+(defpackage portfolio.djula
     (:use :cl)
-    (:import-from :caveman-study.config
+    (:import-from :portfolio.config
         :config
         :appenv
         :developmentp
@@ -48,4 +48,4 @@
     (:import-from :caveman2
         :url-for))
 
-(setf djula:*djula-execute-package* (find-package :caveman-study.djula))
+(setf djula:*djula-execute-package* (find-package :portfolio.djula))

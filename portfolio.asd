@@ -1,4 +1,4 @@
-(defsystem "caveman-study"
+(defsystem "portfolio"
     :version "0.1.0"
     :author "takeokunn"
     :license ""
@@ -32,4 +32,4 @@
                          (:file "db" :depends-on ("config"))
                          (:file "config"))))
     :description ""
-    :in-order-to ((test-op (test-op "caveman-study-test"))))
+    :in-order-to ((test-op (test-op "portfolio-test"))))

@@ -1,19 +1,19 @@
-(ql:quickload :caveman-study)
+(ql:quickload :portfolio)
 
-(defpackage caveman-study.app
+(defpackage portfolio.app
     (:use :cl)
     (:import-from :lack.builder
         :builder)
     (:import-from :ppcre
         :scan
         :regex-replace)
-    (:import-from :caveman-study.web
+    (:import-from :portfolio.web
         :*web*)
-    (:import-from :caveman-study.config
+    (:import-from :portfolio.config
         :config
         :productionp
         :*static-directory*))
-(in-package :caveman-study.app)
+(in-package :portfolio.app)
 
 (builder
     (:static

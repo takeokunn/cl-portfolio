@@ -1,15 +1,15 @@
 (in-package :cl-user)
-(defpackage caveman-study.web
+(defpackage portfolio.web
     (:use :cl
         :caveman2
-        :caveman-study.config
-        :caveman-study.view
-        :caveman-study.db
-        :caveman-study.controller
+        :portfolio.config
+        :portfolio.view
+        :portfolio.db
+        :portfolio.controller
         :datafly
         :sxql)
     (:export :*web*))
-(in-package :caveman-study.web)
+(in-package :portfolio.web)
 
 ;; for @route annotation
 ;; (syntax:use-syntax :annot)

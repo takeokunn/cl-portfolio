@@ -1,7 +1,7 @@
 (in-package :cl-user)
-(defpackage caveman-study.db
+(defpackage portfolio.db
     (:use :cl)
-    (:import-from :caveman-study.config
+    (:import-from :portfolio.config
         :config)
     (:import-from :datafly
         :*connection*)
@@ -10,7 +10,7 @@
     (:export :connection-settings
         :db
         :with-connection))
-(in-package :caveman-study.db)
+(in-package :portfolio.db)
 
 (defun connection-settings (&optional (db :maindb))
     (cdr (assoc db (config :databases))))

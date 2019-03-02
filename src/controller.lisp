@@ -1,9 +1,9 @@
 (in-package :cl-user)
-(defpackage caveman-study.controller
+(defpackage portfolio.controller
     (:use :cl
-        :caveman-study.view
-        :caveman-study.db
-        :caveman-study.model)
+        :portfolio.view
+        :portfolio.db
+        :portfolio.model)
     (:export :root
         :about
         :get-contact
@@ -13,7 +13,7 @@
         :insert-contacts
         :insert-contacts))
 
-(in-package :caveman-study.controller)
+(in-package :portfolio.controller)
 
 ;; for slack
 (defun post-slack (name email text)
