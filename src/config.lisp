@@ -1,6 +1,7 @@
 (in-package :cl-user)
 (defpackage portfolio.config
-    (:use :cl)
+    (:use :cl
+        :portfolio.lib)
     (:import-from :envy
         :config-env-var
         :defconfig)
@@ -13,6 +14,8 @@
         :productionp))
 (in-package :portfolio.config)
 
+(load-env (asdf:system-relative-pathname "portfolio" ".env"))
+
 (setf (config-env-var) "APP_ENV")
 
 (defparameter *application-root*   (asdf:system-source-directory :portfolio))
@@ -21,9 +24,11 @@
 
 (defconfig :common
     `(:databases ((:maindb :mysql
-                      :database-name "portfolio"
-                      :username "root"
-                      :password "P@ssw0rd"))))
+                      :database-name (uiop:getenv "DATABASE_NAME")
+                      :host (uiop:getenv "DATABASE_HOST")
+                      :port (uiop:getenv "DATABASE_PORT")
+                      :username (uiop:getenv "DATABASE_USERNAME")
+                      :password (uiop:getenv "DATABASE_PASSWORD")))))
 
 (defconfig |development|
     '())

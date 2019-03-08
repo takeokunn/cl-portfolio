@@ -9,6 +9,7 @@
                     "cl-ppcre"
                     "uiop"
                     "alexandria"
+                    "serapeum"
                     "drakma"
                     "cl-json"
                     "log4cl"
@@ -26,10 +27,11 @@
                      :components
                      ((:file "main" :depends-on ("config" "view" "db"))
                          (:file "web" :depends-on ("view" "controller"))
-                         (:file "controller" :depends-on ("view" "model"))
+                         (:file "controller" :depends-on ("view" "model" "lib"))
                          (:file "model" :depends-on ("db"))
                          (:file "view" :depends-on ("config"))
                          (:file "db" :depends-on ("config"))
-                         (:file "config"))))
+                         (:file "config" :depends-on ("lib"))
+                         (:file "lib"))))
     :description ""
     :in-order-to ((test-op (test-op "portfolio-test"))))
