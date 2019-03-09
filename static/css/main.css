@@ -7,6 +7,12 @@
     padding: 160px 0;
 }
 
+@media (max-width: 768px) {
+    #main .columns {
+        padding: 100px 0;
+    }
+}
+
 #main .columns .column:first-of-type {
     text-align: center;
 }

@@ -14,7 +14,10 @@ main#about .my-site > p {
 
 main#about .my-site .column {
     border: 1px solid #ddd;
-    padding: 10px 20px;
+    padding: 10px 20px 20px;
+}
+
+@media (max-width: 768px) {
     margin-bottom: 10px;
 }
 
