@@ -17,9 +17,10 @@
 
 ;; for slack
 (defun post-slack (name email text)
-    (let ((payload (format nil "{\"username\":\"bot\",\"icon_emoji\":\":hatching_chick:\",\"text\":\"<@U7RM4J8MR> 名前: ~A メールアドレス: ~A 内容: ~A \",\"as_user\":true}" name email text)))
+    (let ((payload (format nil "{\"username\":\"bot\",\"icon_emoji\":\":hatching_chick:\",\"text\":\"<@U7RM4J8MR> 名前: ~A メールアドレス: ~A 内容: ~A \",\"as_user\":true}" name email text))
+             (webhook_url (uiop:getenv "SLACK_WEBHOOK_URL")))
         (setq drakma:*drakma-default-external-format* :utf-8)
-        (drakma:http-request "https://hooks.slack.com/services/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"
+        (drakma:http-request webhook_url
             :method :post
             :content-type "application/json"
             :parameters `(("payload" . ,payload)))))
