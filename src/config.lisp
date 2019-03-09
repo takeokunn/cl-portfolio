@@ -24,11 +24,10 @@
 
 (defconfig :common
     `(:databases ((:maindb :mysql
-                      :database-name (uiop:getenv "DATABASE_NAME")
-                      :host (uiop:getenv "DATABASE_HOST")
-                      :port (uiop:getenv "DATABASE_PORT")
-                      :username (uiop:getenv "DATABASE_USERNAME")
-                      :password (uiop:getenv "DATABASE_PASSWORD")))))
+                      :database-name ,(uiop:getenv "DATABASE_NAME")
+                      :host ,(uiop:getenv "DATABASE_HOST")
+                      :username ,(uiop:getenv "DATABASE_USERNAME")
+                      :password ,(uiop:getenv "DATABASE_PASSWORD")))))
 
 (defconfig |development|
     '())
