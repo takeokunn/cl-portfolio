@@ -36,7 +36,7 @@
     (render #P"contact.html"))
 
 (defun post-contact (name email text)
-    (insert-contacts name email text)
+    ; (insert-contacts name email text)
     (post-slack name email text)
     (render #P"thanks.html"))
 
